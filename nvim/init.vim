@@ -26,9 +26,11 @@ Plug 'ggandor/lightspeed.nvim'
 " Add indent lines
 Plug 'lukas-reineke/indent-blankline.nvim'
 
+" Highlight whitespaces
+Plug 'ntpeters/vim-better-whitespace'
+
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'BurntSushi/ripgrep'
 
 " Debugger
 " Plug 'puremourning/vimspector'
@@ -58,6 +60,9 @@ call plug#end()
 
 nmap <leader>f <Plug>SnipRun
 vmap f <Plug>SnipRun
+
+" \sw to clear whitespaces in file
+nnoremap <leader>sw <cmd>:StripWhitespace<cr>
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
