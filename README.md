@@ -4,7 +4,7 @@ Run:
 python3 -m pip install --upgrade pynvim
 
 Also install
-npm
+npm nvim tmux fzf zsh git
 
 List all available language servers with:
 :LspInstallInfo
