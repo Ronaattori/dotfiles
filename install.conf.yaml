@@ -1,11 +1,11 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux.conf: tmux.conf
-    ~/.zshrc: zshrc
     ~/.config/nvim:
         path: nvim
         create: true
+    ~/.tmux.conf: tmux.conf
+    ~/.zshrc: zshrc
     ~/.config/i3: i3
-    ~/.config/rofi: ~
-    ~/.config/picom.conf: ~
+    ~/.config/rofi: rofi
+    ~/.config/picom: picom
