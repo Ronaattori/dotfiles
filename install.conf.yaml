@@ -10,3 +10,6 @@
     ~/.config/i3: i3
     ~/.config/rofi: rofi
     ~/.config/picom: picom
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
