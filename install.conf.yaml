@@ -5,6 +5,7 @@
         path: nvim
         create: true
     ~/.tmux.conf: tmux.conf
+    ~/.oh-my-zsh: oh-my-zsh
     ~/.zshrc: zshrc
     ~/.config/i3: i3
     ~/.config/rofi: rofi
