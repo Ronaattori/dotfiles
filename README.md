@@ -2,6 +2,8 @@
 
 Run:
 python3 -m pip install --upgrade pynvim
+pip install neovim
+
 
 Also install
 npm nvim tmux fzf zsh git curl
