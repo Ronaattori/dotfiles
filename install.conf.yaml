@@ -10,6 +10,9 @@
     ~/.config/i3: i3
     ~/.config/rofi: rofi
     ~/.config/picom: picom
+    ~/.fzf: fzf
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [~/.fzf/install --completion --key-bindings --no-update-rc, Installing fzf]
+
