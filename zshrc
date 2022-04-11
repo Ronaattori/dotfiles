@@ -108,6 +108,9 @@ if which nvim &> /dev/null; then
   export EDITOR=/bin/nvim
 fi
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+if [ -f ~/.fzf.zsh ]; then
+  # Load FZF
+  source ~/.fzf.zsh
+fi
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
