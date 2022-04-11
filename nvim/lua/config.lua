@@ -1,7 +1,7 @@
 require'nvim-treesitter.configs'.setup {
 
 	-- Auto install maintained parsers
-	ensure_installed = "maintained",
+	ensure_installed = "all",
 
 	-- Install languages synchronously (only applied to `ensure_installed`)
 	sync_install = false,
@@ -23,7 +23,6 @@ require("indent_blankline").setup {
     space_char_blankline = " ",
     show_current_context = true,
     show_current_context_start = true,
-	
 }
 
 -- Language server installer
@@ -57,6 +56,6 @@ require("sniprun").setup({
 })
 
 -- Jump around snippets with tab
-vim.g.UltiSnipsExpandTrigger="<tab>"
+-- vim.g.UltiSnipsExpandTrigger="<S-CR>"
 vim.g.UltiSnipsJumpForwardTrigger="<tab>"
 vim.g.UltiSnipsJumpBackwardTrigger="<S-tab>"
