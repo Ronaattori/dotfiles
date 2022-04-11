@@ -10,6 +10,7 @@
     ~/.config/i3: i3
     ~/.config/rofi: rofi
     ~/.config/picom: picom
+    ~/.config/kitty: kitty 
     ~/.fzf: fzf
 
 - shell:
