@@ -43,16 +43,16 @@ Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-buffer'
+" Plug 'hrsh7th/cmp-path'
+" Plug 'hrsh7th/cmp-cmdline'
+" Plug 'hrsh7th/nvim-cmp'
 
 " For ultisnips users.
-Plug 'SirVer/ultisnips'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips'
+" Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+" Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -78,7 +78,7 @@ colorscheme PaperColor
 set laststatus=2
 
 " Load lua config from ~/.config/nvim/lua/cmpConfig.lua
-lua require('cmpConfig')
+" lua require('cmpConfig')
 
 " Load lua config from ~/.config/nvim/lua/telescopeConfig.lua
 lua require('telescopeConfig')
