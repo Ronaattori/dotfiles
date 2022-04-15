@@ -52,7 +52,7 @@ vim.diagnostic.config({
 
 -- How to display sniprun result
 require("sniprun").setup({
-    display = {"Classic"},
+    display = {"TempFloatingWindow"},
 })
 
 -- Jump around snippets with tab
