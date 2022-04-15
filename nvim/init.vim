@@ -69,6 +69,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" Remap :W to :w cause releasing shift is hard 8DDDD
+cnoremap W w
+
 
 set completeopt=menu,menuone,noselect
 
