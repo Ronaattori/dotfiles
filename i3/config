@@ -196,6 +196,12 @@ smart_gaps on
 gaps inner 5
 #gaps outer 1
 
+# Run arandr script
+exec ~/.screenlayout/office.sh
+
+# Set background
+exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
+
 # Start a compositor
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf --xrender-sync-fence
 
