@@ -6,7 +6,7 @@ Run:
 
 
 Also install
-npm neovim tmux fzf zsh git curl
+base-devel npm neovim tmux zsh git curl
 
 ## Nvim
 
