@@ -1,7 +1,20 @@
 require'nvim-treesitter.configs'.setup {
 
-	-- Auto install maintained parsers
-	ensure_installed = "all",
+	-- Auto install listed parsers
+	ensure_installed = {
+		"python",
+		"javascript",
+		"php",
+		"lua",
+		"json",
+		"dockerfile",
+		"css",
+		"scss",
+		"regex",
+		"rasi",
+		"yaml",
+		"vim"
+		},
 
 	-- Install languages synchronously (only applied to `ensure_installed`)
 	sync_install = false,
