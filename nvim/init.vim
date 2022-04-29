@@ -43,6 +43,9 @@ Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 
+" Cache vim configs
+Plug 'lewis6991/impatient.nvim'
+
 " Plug 'hrsh7th/cmp-nvim-lsp'
 " Plug 'hrsh7th/cmp-buffer'
 " Plug 'hrsh7th/cmp-path'
@@ -55,6 +58,9 @@ Plug 'williamboman/nvim-lsp-installer'
 " Plug 'honza/vim-snippets'
 
 call plug#end()
+
+" Load config cache
+lua require('impatient')
 
 " Set up keybinds
 
