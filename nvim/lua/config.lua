@@ -62,13 +62,3 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = false,
 })
-
--- How to display sniprun result
-require("sniprun").setup({
-    display = {"TempFloatingWindow"},
-})
-
--- Jump around snippets with tab
--- vim.g.UltiSnipsExpandTrigger="<S-CR>"
-vim.g.UltiSnipsJumpForwardTrigger="<tab>"
-vim.g.UltiSnipsJumpBackwardTrigger="<S-tab>"
