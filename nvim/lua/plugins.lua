@@ -5,22 +5,24 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 return require('packer').startup(function(use)
 
-use 'lewis6991/impatient.nvim'
-use 'NLKNguyen/papercolor-theme'
-use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
-use 'tpope/vim-surround'
-use 'ggandor/lightspeed.nvim'
-use 'lukas-reineke/indent-blankline.nvim'
-use 'ntpeters/vim-better-whitespace'
-use 'nvim-lua/plenary.nvim'
-use 'nvim-telescope/telescope.nvim'
-use 'neovim/nvim-lspconfig'
-use 'williamboman/nvim-lsp-installer'
+	use 'lewis6991/impatient.nvim'
+	use 'wbthomason/packer.nvim'
 
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+	use 'NLKNguyen/papercolor-theme'
+	use {
+			'nvim-treesitter/nvim-treesitter',
+			run = ':TSUpdate'
+		}
+	use 'tpope/vim-surround'
+	use 'ggandor/lightspeed.nvim'
+	use 'lukas-reineke/indent-blankline.nvim'
+	use 'ntpeters/vim-better-whitespace'
+	use 'nvim-lua/plenary.nvim'
+	use 'nvim-telescope/telescope.nvim'
+	use 'neovim/nvim-lspconfig'
+	use 'williamboman/nvim-lsp-installer'
+
+	if packer_bootstrap then
+		require('packer').sync()
+	end
 end)
