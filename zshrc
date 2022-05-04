@@ -73,6 +73,7 @@ ZSH_THEME="agnoster"
 plugins=(
 	git
 	colored-man-pages
+	ssh-agent
 )
 
 source $ZSH/oh-my-zsh.sh
