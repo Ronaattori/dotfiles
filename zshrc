@@ -116,4 +116,10 @@ if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
 fi
 
+# Add "SSH @" in front of the command prompt on ssh connections
+# Only between my computers that share this zshrc
+if [[ -n $SSH_CONNECTION ]]; then
+	PS1="SSH @$PS1"
+fi
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
