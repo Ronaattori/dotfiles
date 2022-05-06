@@ -5,9 +5,10 @@ set shiftwidth=4
 set nocompatible
 set pumheight=8
 
+lua require('impatient')
+
 lua require('plugins')
 
-lua require('impatient')
 
 " Set up keybinds
 
