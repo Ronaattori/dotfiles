@@ -4,6 +4,7 @@ set tabstop=4
 set shiftwidth=4
 set nocompatible
 set pumheight=8
+set termguicolors
 
 lua require('impatient')
 

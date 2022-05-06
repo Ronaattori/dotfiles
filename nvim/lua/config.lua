@@ -42,7 +42,6 @@ require('nvim-autopairs').setup{
 	check_ts = true,
 }
 
-
 -- Language server installer
 local lsp_installer = require("nvim-lsp-installer")
 lsp_installer.on_server_ready(function(server)
