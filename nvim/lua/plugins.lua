@@ -31,6 +31,12 @@ return require('packer').startup(function(use)
 	-- Highlight trailing whitespaces
 	use 'ntpeters/vim-better-whitespace'
 
+	-- Auto pair everything
+	use 'windwp/nvim-autopairs'
+
+	-- Highlight current hovered variable like in vscode
+	use 'RRethy/vim-illuminate'
+
 	-- Grep project root and search files
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
@@ -38,6 +44,9 @@ return require('packer').startup(function(use)
 	-- Language server to provide syntax checking
 	use 'neovim/nvim-lspconfig'
 	use 'williamboman/nvim-lsp-installer'
+
+	-- Autocompletion and stuff
+	use 'ms-jpq/coq_nvim'
 
 	if packer_bootstrap then
 		require('packer').sync()
