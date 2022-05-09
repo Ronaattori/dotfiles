@@ -77,3 +77,10 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = false,
 })
+
+-- COQ
+vim.g.coq_settings = {
+	["display.pum.y_max_len"] = 5,
+
+}
+
