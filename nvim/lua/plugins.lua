@@ -46,7 +46,16 @@ return require('packer').startup(function(use)
 	use 'williamboman/nvim-lsp-installer'
 
 	-- Autocompletion and stuff
-	use 'ms-jpq/coq_nvim'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+
+	-- For ultisnips users.
+	use 'SirVer/ultisnips'
+	use 'honza/vim-snippets'
+	use 'quangnguyen30192/cmp-nvim-ultisnips'
 
 	if packer_bootstrap then
 		require('packer').sync()

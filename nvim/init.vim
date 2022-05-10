@@ -32,11 +32,11 @@ set background=dark
 colorscheme PaperColor
 set laststatus=2
 
-" Load lua config from ~/.config/nvim/lua/cmpConfig.lua
-" lua require('cmpConfig')
 
 " Load lua config from ~/.config/nvim/lua/telescopeConfig.lua
 lua require('telescopeConfig')
-"
+
+lua require('cmpConfig')
+
 " Load lua config from ~/.config/nvim/lua/config.lua
 lua require('config')

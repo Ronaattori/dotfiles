@@ -63,6 +63,8 @@ lsp_installer.on_server_ready(function(server)
 		  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', options)
 	end
 
+	opts.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
     -- This setup() function will take the provided server configuration and decorate it with the necessary properties
     -- before passing it onwards to lspconfig.
     -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
@@ -78,9 +80,4 @@ vim.diagnostic.config({
   severity_sort = false,
 })
 
--- COQ
-vim.g.coq_settings = {
-	["display.pum.y_max_len"] = 5,
-
-}
 
