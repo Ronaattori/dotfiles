@@ -1,5 +1,8 @@
 local cmp = require'cmp'
 
+vim.g.UltiSnipsExpandTrigger=""
+vim.g.UltiSnipsJumpForwardTrigger="<Tab>"
+vim.g.UltiSnipsJumpBackwardTrigger="<s-tab>"
 cmp.setup({
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
@@ -22,18 +25,6 @@ cmp.setup({
 		-- ['<C-Space>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.abort(),
 		['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-		["<Tab>"] = cmp.mapping(
-			function(fallback)
-				require('cmp_nvim_ultisnips.mappings').expand_or_jump_forwards(fallback)
-			end,
-			{ "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
-		),
-		["<S-Tab>"] = cmp.mapping(
-			function(fallback)
-				require('cmp_nvim_ultisnips.mappings').jump_backwards(fallback)
-			end,
-			{ "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
-		),
 
 	}),
 	sources = cmp.config.sources({
@@ -44,7 +35,19 @@ cmp.setup({
 		-- { name = 'snippy' }, -- For snippy users.
 	}, {
 			{ name = 'buffer' },
-		})
+		}),
+	-- Disable CMP in certain contexts
+	enabled = function()
+		local context = require('cmp.config.context')
+		if context.in_treesitter_capture('comment')==true or context.in_treesitter_capture('Comment')==true then
+			return false
+		end
+
+		if context.in_treesitter_capture('string')==true or context.in_treesitter_capture('String')==true then
+			return false
+		end
+		return true
+	end
 })
 
 -- Set configuration for specific filetype.

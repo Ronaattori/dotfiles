@@ -36,7 +36,8 @@ set laststatus=2
 " Load lua config from ~/.config/nvim/lua/telescopeConfig.lua
 lua require('telescopeConfig')
 
-lua require('cmpConfig')
 
 " Load lua config from ~/.config/nvim/lua/config.lua
 lua require('config')
+
+lua require('cmpConfig')
