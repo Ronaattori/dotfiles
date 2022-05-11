@@ -1,8 +1,8 @@
 local cmp = require'cmp'
 
-vim.g.UltiSnipsExpandTrigger=nil
 vim.g.UltiSnipsJumpForwardTrigger="<tab>"
 vim.g.UltiSnipsJumpBackwardTrigger="<S-tab>"
+
 cmp.setup({
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
