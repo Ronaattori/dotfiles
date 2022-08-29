@@ -5,12 +5,12 @@ Run:
 * `pip install neovim`
 
 
-Also install
-base-devel npm neovim tmux zsh git curl
+And install the following packages:
+base-devel curl wget unzip tar gzip npm neovim zsh git kitty
 
 ## Nvim
 
-Launch nvim to auto download vim-plug and ignore all errors. Restart nvim and run `:PlugInstall`
+Launch nvim to auto download vim-plug and ignore all errors. Restart nvim and run `:PackerInstall`
 
 List all available language servers with:
 `:LspInstallInfo`

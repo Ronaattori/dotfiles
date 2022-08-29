@@ -43,7 +43,8 @@ return require('packer').startup(function(use)
 
 	-- Language server to provide syntax checking
 	use 'neovim/nvim-lspconfig'
-	use 'williamboman/nvim-lsp-installer'
+	use 'williamboman/mason.nvim'
+	use 'williamboman/mason-lspconfig.nvim'
 
 	-- Autocompletion and stuff
 	use 'hrsh7th/cmp-nvim-lsp'
