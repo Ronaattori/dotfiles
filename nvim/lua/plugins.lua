@@ -58,6 +58,9 @@ return require('packer').startup(function(use)
 	use 'honza/vim-snippets'
 	use 'quangnguyen30192/cmp-nvim-ultisnips'
 
+	-- For toggle commenting blocks of code
+	use 'numToStr/Comment.nvim'
+
 	-- Markdown previewer
 	-- Use with :MarkdownPreview
 	use({

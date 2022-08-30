@@ -42,6 +42,17 @@ require('nvim-autopairs').setup{
 	check_ts = true,
 }
 
+require('Comment').setup{
+	mappings = {
+		basic = true,
+		extra = false,
+		extended = false,
+	},
+	opleader = {
+		line = "<C-'>", -- Same as the VsCode bind for toggling comments
+	}
+}
+
 -- Language server installer
 require("mason").setup()
 require("mason-lspconfig").setup()
