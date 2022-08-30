@@ -47,36 +47,26 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 -- Setup all LSP servers
 -- Refer to https://github.com/neovim/nvim-lspconfig for passing parameters to the servers
+local on_attach = function(client, bufnr)
+	local options = { noremap=true, silent=true }
+	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+	vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+	vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+	vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+	vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+	vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+end
 local lsp_servers = require("mason-lspconfig").get_installed_servers()
 for key, value in pairs(lsp_servers) do
-	require('lspconfig')[value].setup{};
+	local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+	require('lspconfig')[value].setup{
+		capabilities = capabilities,
+		on_attach = on_attach,
+	};
 end
--- lsp_installer.on_server_ready(function(server)
---     local opts = {}
--- 
---     -- (optional) Customize the options passed to the server
---     -- if server.name == "tsserver" then
---     --     opts.root_dir = function() ... end
---     -- end
--- 	opts.on_attach = function(client, bufnr)
--- 		  local options = { noremap=true, silent=true }
--- 		  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
--- 
--- 		  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', options)
--- 		  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', options)
--- 		  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', options)
--- 		  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', options)
--- 		  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', options)
--- 		  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', options)
--- 	end
--- 
--- 	opts.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- 
---     -- This setup() function will take the provided server configuration and decorate it with the necessary properties
---     -- before passing it onwards to lspconfig.
---     -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
---     server:setup(opts)
--- end)
+
 
 -- LSP error message styling
 vim.diagnostic.config({
