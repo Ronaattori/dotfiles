@@ -87,9 +87,12 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+# Kitty related stuff
 if [[ $TERM == "xterm-kitty" ]]; then
 	alias ssh="kitty +kitten ssh"
+	alias icat="kitty +kitten icat"
 fi
+
 
 
 # Enable extended glob
