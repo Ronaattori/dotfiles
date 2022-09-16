@@ -61,6 +61,9 @@ return require('packer').startup(function(use)
 	-- For toggle commenting blocks of code
 	use 'numToStr/Comment.nvim'
 
+	-- Jupyter
+	use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
+
 	-- Markdown previewer
 	-- Use with :MarkdownPreview
 	use({

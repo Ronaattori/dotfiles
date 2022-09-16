@@ -42,6 +42,11 @@ require('nvim-autopairs').setup{
 	check_ts = true,
 }
 
+
+-- Jupyter binds
+vim.keymap.set('n', '<S-CR>', ':MagmaEvaluateLine<CR>');
+vim.keymap.set('v', '<S-CR>', ':MagmaEvaluateVisual<CR>');
+
 require('Comment').setup{
 	mappings = {
 		basic = true,
