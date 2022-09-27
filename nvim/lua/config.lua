@@ -32,6 +32,8 @@ require'nvim-treesitter.configs'.setup {
   	},
 }
 
+require('gitsigns').setup()
+
 require("indent_blankline").setup {
     space_char_blankline = " ",
     show_current_context = true,

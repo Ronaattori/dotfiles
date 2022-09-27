@@ -32,6 +32,8 @@ set background=dark
 colorscheme PaperColor
 set laststatus=2
 
+" Load lua config from ./lua/felineConfig.lua
+lua require('felineConfig')
 
 " Load lua config from ./lua/telescopeConfig.lua
 lua require('telescopeConfig')

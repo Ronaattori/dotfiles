@@ -22,6 +22,15 @@ return require('packer').startup(function(use)
 
 	use 'tpope/vim-surround'
 
+	-- Statusbar
+	use 'feline-nvim/feline.nvim'
+	use 'kyazdani42/nvim-web-devicons'
+	use {
+		"SmiteshP/nvim-navic",
+		requires = "neovim/nvim-lspconfig"
+	}
+	use {'lewis6991/gitsigns.nvim'}
+
 	-- For giga fast navigating
 	use 'ggandor/lightspeed.nvim'
 
