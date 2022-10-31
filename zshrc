@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Kitty related stuff
 if [[ $TERM == "xterm-kitty" ]]; then
-	# alias ssh="kitty +kitten ssh"
+	alias ssh="TERM=xterm ssh"
 	alias icat="kitty +kitten icat"
 fi
 
