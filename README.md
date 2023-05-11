@@ -6,7 +6,7 @@ Run:
 
 
 And install the following packages:
-base-devel curl wget unzip tar gzip npm neovim zsh git kitty
+base-devel curl wget unzip tar gzip npm neovim zsh git kitty ripgrep
 
 ## Nvim
 
