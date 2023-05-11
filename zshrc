@@ -96,6 +96,7 @@ fi
 
 
 # Enable extended glob
+# eg. ls !(home)
 setopt kshglob
 setopt nobareglobqual
 
@@ -107,6 +108,7 @@ setopt nobareglobqual
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vimconfig="vim ~/.vim/vimrc"
+alias rgf="rg --files | rg"
 
 # Use neovim instead of vim if installed
 export EDITOR=vim
