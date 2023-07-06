@@ -109,6 +109,7 @@ alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vimconfig="vim ~/.vim/vimrc"
 alias rgf="rg --files | rg"
+alias ducks="du -cksh * | sort -h"
 
 # Use neovim instead of vim if installed
 export EDITOR=vim
