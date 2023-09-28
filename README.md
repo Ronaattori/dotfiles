@@ -1,16 +1,10 @@
 # dotfiles
 
-Run:
-* `python3 -m pip install --upgrade pynvim`
-* `pip install neovim`
-
-
-And install the following packages:
-base-devel curl wget unzip tar gzip npm neovim zsh git kitty ripgrep
+Run `./install_packages.sh` to install packages :)
 
 ## Nvim
 
-Launch nvim to auto download vim-plug and ignore all errors. Restart nvim and run `:PackerInstall`
+Launch nvim to auto download packer and ignore all errors. Restart nvim and run `:PackerInstall`
 
 List all available language servers with:
 `:LspInstallInfo`
