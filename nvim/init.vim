@@ -14,8 +14,6 @@ if exists('g:vscode')
 else
 	" ordinary Neovim
 	" Loads plugins from ./lua/nvim/<file>
-	lua require('impatient')
-
 	lua require('nvim/plugins')
 
 	lua require('nvim/felineConfig')
