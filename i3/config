@@ -217,3 +217,15 @@ bindsym Mod4+Shift+s exec spectacle -r
 bindsym Ctrl+$mod+k exec playerctl play-pause
 bindsym Ctrl+$mod+l exec playerctl next
 bindsym Ctrl+$mod+j exec playerctl previous
+
+# Load keyboard remap to swap:
+# Caps lock -> Mod3
+# Super_R (Right Windows) -> Caps_Lock
+exec_always --no-startup-id xmodmap ~/.xmodmaprc
+
+# Bind arrow keys to physical Caps_Lock+[ijkl]
+bindsym --release Mod3+i exec --no-startup-id xdotool key --clearmodifiers Up
+bindsym --release Mod3+k exec --no-startup-id xdotool key --clearmodifiers Down
+bindsym --release Mod3+j exec --no-startup-id xdotool key --clearmodifiers Left
+bindsym --release Mod3+l exec --no-startup-id xdotool key --clearmodifiers Right
+

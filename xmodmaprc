@@ -1,0 +1,16 @@
+
+! 66 == Caps_Lock
+! 133 == Right Windows button
+keycode 66 = ISO_Level5_Shift
+keycode 134 = Caps_Lock
+!
+
+clear lock
+
+!add lock = Caps_Lock
+
+!clear mod3
+
+! Bind Caps lock to Right Windows
+
+!add mod3 = ISO_Level5_Shift

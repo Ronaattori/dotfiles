@@ -10,8 +10,9 @@
     ~/.config/i3: i3
     ~/.config/rofi: rofi
     ~/.config/picom: picom
-    ~/.config/kitty: kitty 
+    ~/.config/kitty: kitty
     ~/.fzf: fzf
+    ~/.xmodmaprc: xmodmaprc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
