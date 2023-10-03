@@ -1,16 +1,9 @@
-
+! Map Caps_Lock -> Mod3
+! Map Super_R -> Caps_Lock
 ! 66 == Caps_Lock
-! 133 == Right Windows button
+! 134 == Right Super_R (Right Windows)
 keycode 66 = ISO_Level5_Shift
 keycode 134 = Caps_Lock
-!
 
+! Then remove the lock modifier, as it doesn't seem to be needed?
 clear lock
-
-!add lock = Caps_Lock
-
-!clear mod3
-
-! Bind Caps lock to Right Windows
-
-!add mod3 = ISO_Level5_Shift
