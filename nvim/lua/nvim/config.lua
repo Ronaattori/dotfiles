@@ -34,10 +34,8 @@ require'nvim-treesitter.configs'.setup {
 
 require('gitsigns').setup()
 
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
-    show_current_context_start = true,
+require("ibl").setup {
+	-- I don't think i need any specific setup here
 }
 
 require('nvim-autopairs').setup{
