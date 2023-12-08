@@ -229,3 +229,6 @@ bindsym --release Mod3+k exec --no-startup-id xdotool key --clearmodifiers Down
 bindsym --release Mod3+j exec --no-startup-id xdotool key --clearmodifiers Left
 bindsym --release Mod3+l exec --no-startup-id xdotool key --clearmodifiers Right
 
+# Laptop specific stuff
+exec --no-startup-id nm-applet
+exec --no-startup-id xfce4-power-manager
