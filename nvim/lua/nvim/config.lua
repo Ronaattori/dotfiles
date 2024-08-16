@@ -7,13 +7,14 @@ require'nvim-treesitter.configs'.setup {
 		"php",
 		"lua",
 		"json",
-		"dockerfile",
+		-- "dockerfile",
 		"css",
 		"scss",
 		"regex",
 		"rasi",
 		"yaml",
-		"vim"
+		"vim", 
+		"markdown"
 		},
 
 	-- Install languages synchronously (only applied to `ensure_installed`)

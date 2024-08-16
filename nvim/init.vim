@@ -21,7 +21,7 @@ else
 	lua require('nvim/config')
 	lua require('nvim/cmpConfig')
 
-	colorscheme PaperColor
+	colorscheme catppuccin-mocha
 
 	" \sw to clear whitespaces in file
 	nnoremap <leader>sw <cmd>:StripWhitespace<cr>

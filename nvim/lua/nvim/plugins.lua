@@ -9,7 +9,8 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Vim theme
-	use 'NLKNguyen/papercolor-theme'
+	--use 'NLKNguyen/papercolor-theme'
+	use 'catppuccin/nvim'
 
 	-- Code syntax reading to provide functionality to all other things
 	use {
@@ -66,14 +67,6 @@ return require('packer').startup(function(use)
 
 	-- For toggle commenting blocks of code
 	use 'numToStr/Comment.nvim'
-
-	-- Markdown previewer
-	-- Use with :MarkdownPreview
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function() vim.fn["mkdp#util#install"]() end,
-	})
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 	if packer_bootstrap then
 		require('packer').sync()
