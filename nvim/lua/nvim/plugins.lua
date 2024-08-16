@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
 	-- Vim theme
 	--use 'NLKNguyen/papercolor-theme'
 	use 'catppuccin/nvim'
+	use 'sainnhe/sonokai'
 
 	-- Code syntax reading to provide functionality to all other things
 	use {
