@@ -112,6 +112,9 @@ alias rgf="rg --files | rg"
 alias ducks="du -cksh * | sort -h"
 alias clipboard="xclip -sel clip" # Pipe stuff to the clipboard. eg. "ls | clipboard"
 
+# Unbind some ZSH defaults
+bindkey -r "^J" # ctrl + j == accept-line
+
 # Use neovim instead of vim if installed
 export EDITOR=vim
 if which nvim &> /dev/null; then
