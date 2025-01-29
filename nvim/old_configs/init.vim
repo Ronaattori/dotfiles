@@ -6,6 +6,8 @@ set nocompatible
 set pumheight=8
 set termguicolors
 
+lua require('lazy')
+
 if exists('g:vscode')
     " VSCode extension
 	" Loads plugins from ./lua/vscode/<file>
@@ -36,8 +38,4 @@ endif
 cnoremap W w
 
 set completeopt=menu,menuone,noselect
-
-set t_Co=256
-set background=dark
-set laststatus=2
 
