@@ -14,5 +14,7 @@ for opt, val in pairs(opts) do
 end
 
 -- Set other options
-vim.cmd.colorscheme("PaperColor")
+if not vim.g.vscode then
+    vim.cmd.colorscheme("PaperColor")
+end
 
