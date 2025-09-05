@@ -75,29 +75,19 @@ return {
     -- LSP
     -- Load order here is important
     {
-        "williamboman/mason.nvim",
-        config = true
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
+        "mason-org/mason-lspconfig.nvim",
         opts = {
             ensure_installed = {
                 "lua_ls",
                 "ansiblels",
                 "dockerls",
                 "docker_compose_language_service",
+                "vimls",
             },
-        }
-    },
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
-            -- Setup all language servers
-            require("mason-lspconfig").setup_handlers({
-                function (server_name)
-                    require("lspconfig")[server_name].setup({})
-                end,
-            })
-        end,
-    },
+        },
+        dependencies = {
+            { "mason-org/mason.nvim", opts = {} },
+            "neovim/nvim-lspconfig",
+        },
+    }
 }
