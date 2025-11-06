@@ -11,3 +11,11 @@ List all available language servers with:
 
 Install needed language servers inside vim with
 `:LspInstall <language>`
+
+## Games
+### 32-bit support (bnet)
+Enable `[multilib]` in `/etc/pacman.conf` and install the following packages
+```
+sudo pacman -S --needed lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
+
+```
