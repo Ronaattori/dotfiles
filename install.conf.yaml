@@ -13,6 +13,7 @@
     ~/.config/kitty: kitty
     ~/.config/hypr: hyprland
     ~/.config/waybar: waybar
+    ~/.config/dunst: dunst
     ~/.fzf: fzf
     ~/.xmodmaprc: xmodmaprc
 
