@@ -12,6 +12,7 @@ sudo pacman -S --needed \
     neovim \
     rofi \
     zsh \
+    feh \
     git \
     kitty \
     ripgrep \

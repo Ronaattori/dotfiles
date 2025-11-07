@@ -8,6 +8,7 @@
     ~/.oh-my-zsh: ohmyzsh
     ~/.zshrc: zshrc
     ~/.config/i3: i3
+    ~/.config/sway: sway
     ~/.config/rofi: rofi
     ~/.config/picom: picom
     ~/.config/kitty: kitty

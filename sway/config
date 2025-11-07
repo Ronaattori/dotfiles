@@ -4,6 +4,15 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
+output HDMI-A-2 mode 2560x1440@143.855Hz
+output DP-2 mode 2560x1440@239.958Hz
+
+input * xkb_layout fi
+input type:pointer {
+    accel_profile "flat" # disable mouse acceleration (enabled by default; to set it manually, use "adaptive" instead of "flat")
+    pointer_accel 0 # set mouse sensitivity (between -1 and 1)
+}
+
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -41,7 +50,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod+Ctrl
+# floating_modifier $mod+Ctrl
+
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -260,3 +270,5 @@ for_window [floating] border pixel 0
 for_window [all] title_window_icon padding 2px
 # focus_follows_mouse no
 bindsym Mod4+g mode "gaming"
+
+include /etc/sway/config.d/*
