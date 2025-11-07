@@ -23,6 +23,8 @@ sudo pacman -S --needed \
     xdotool \
     spectacle \
     i3lock \
+    i3 \
+    autotiling \
     i3status \
     xclip
 

@@ -19,3 +19,11 @@ Enable `[multilib]` in `/etc/pacman.conf` and install the following packages
 sudo pacman -S --needed lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
 
 ```
+And random utilities
+```
+sudo pacman -S gamemode lib32-gamemode gamescope
+```
+Add yourself to the gamemode group to make it work
+```
+sudo usermod -aG gamemode <user>
+```
