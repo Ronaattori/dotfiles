@@ -27,3 +27,30 @@ Add yourself to the gamemode group to make it work
 ```
 sudo usermod -aG gamemode <user>
 ```
+
+## Audio
+### yabridge
+```bash
+sudo pacman -S reaper yabridge yabridgectl realtime-privileges
+sudo usermod -aG realtime <user>
+```
+First install plugins into some wine prefix normally
+
+Then set environment variables. Might need to change the relative paths to absolutes. I've noticed that some plugins only run under ge-proton wine, so we'll need to change the "global" runner to that
+
+You can adjust the audio latency by reducing `1024` below. Test how low you can go while still hearing sound in reaper
+```bash
+export WINEPREFIX=~/Games/someprefix
+export WINELOADER=~/.local/share/lutris/runners/proton/ge-proton/files/bin/wine
+export PIPEWIRE_LATENCY=1024/48000
+```
+
+Then add them to yabridge
+1. Run `yabridgectl add "<wineprefix_to_installed_vst>/drive_c/Program Files/Common Files/VST3"`
+2. Run `yabridgectl sync`
+
+Reaper should now find the plugins through yabridge. You will need to set atleast `WINELOADER` env variable before running reaper
+```bash
+export WINELOADER=~/.local/share/lutris/runners/proton/ge-proton/files/bin/wine
+reaper
+```
