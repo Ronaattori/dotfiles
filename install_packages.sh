@@ -18,6 +18,7 @@ sudo pacman -S --needed \
     ripgrep \
     python3 \
     tmux \
+    playerctl \
     zsh-syntax-highlighting \
     python-pynvim \
     ttf-firacode-nerd \

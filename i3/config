@@ -51,7 +51,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec "rofi -modi drun,run -show drun"
+bindsym $mod+space exec "rofi -modi drun,run -show drun -show-icons"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -103,7 +103,7 @@ bindsym $mod+Shift+space floating toggle
 #bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -185,7 +185,7 @@ bar {
         status_command i3status
 }
 
-# Some styling changes
+# Add and style borders
 for_window [class="^.*"] border pixel 1
 hide_edge_borders smart
 client.focused          #FFFF00 #FFFF00 #FFFF00 #FFFF00 #FFFF00
@@ -206,9 +206,6 @@ exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Start autotiling
 exec_always --no-startup-id autotiling
-
-# Start pulseeffects
-exec_always --no-startup-id pulseeffects --gapplication-service
 
 # Custom keybinds for stuff
 bindsym Mod4+l exec i3lock -c 000000
@@ -242,6 +239,9 @@ mode "gaming" {
 
     bindsym $altMod+f fullscreen toggle
 
+    # Alt tab change workspace and remove game mode
+    bindsym Mod1+Tab workspace back_and_forth ; mode "default"
+
     # switch to workspace
     bindsym $altMod+1 workspace number $ws1
     bindsym $altMod+2 workspace number $ws2
@@ -258,5 +258,6 @@ mode "gaming" {
 for_window [class=".*"] fullscreen disable
 for_window [floating] border pixel 0
 for_window [all] title_window_icon padding 2px
+bindsym Mod1+Tab workspace back_and_forth
 # focus_follows_mouse no
 bindsym Mod4+g mode "gaming"
