@@ -1,6 +1,21 @@
 # dotfiles
 
-Run `./install_packages.sh` to install packages :)
+Run the following commands to get most stuff working
+
+```bash
+# Install packages and configure what could be scripted
+sudo ./install_packages.sh
+
+# Make KDE ask sudo password instead of su
+kwriteconfig6 --file kdesurc --group super-user-command --key super-user-command sudo
+
+# Enable periodic SSD trimming
+sudo systemctl enable --now fstrim.timer
+
+# Enable local DNS caching
+sudo systemctl enable --now systemd-resolved
+ln -sf ../run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+```
 
 ## Nvim
 
@@ -17,16 +32,33 @@ Install needed language servers inside vim with
 Enable `[multilib]` in `/etc/pacman.conf` and install the following packages
 ```
 sudo pacman -S --needed lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
+```
+Bottles stuff
+```bash
+sudo pacman -S flatpak steam gamemode lib32-gamemode
+sudo flatpak install bottles mangohud
+flatpak override com.usebottles.bottles --user --filesystem=xdg-data/applications
+```
 
+And utilities
 ```
-And random utilities
-```
-sudo pacman -S gamemode lib32-gamemode gamescope
+sudo pacman -S wine wine-mono gamemode lib32-gamemode mangohud
 ```
 Add yourself to the gamemode group to make it work
 ```
 sudo usermod -aG gamemode <user>
 ```
+
+Suggested Lutris global environment variables
+|Key|Value|Comment
+|---|-----|------|
+|`PROTON_ENABLE_WAYLAND` | 1 | Enable GE-Proton native Wayland
+|`__GL_THREADED_OPTIMIZATION` | 1 | Enable multi-thread nvidia driver stuff
+|`__GL_SHADER_DISK_CACHE` | 1 | Enable shader disk cache
+|`__GL_SHADER_DISK_CACHE_PATH` | /home/user/Games/cache | **This folder needs to be created manually**. Path to write shader disk cache to
+|`__GL_SHADER_DISK_CACHE_SKIP_CLEANUP` | 1 | Make the disk cache size unlimited
+|`DXVK_HUD` | compiler | Show a text on the bottom left when shares are compiling
+
 
 ## Audio
 ### yabridge
