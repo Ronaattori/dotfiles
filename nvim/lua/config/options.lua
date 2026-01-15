@@ -18,3 +18,9 @@ if not vim.g.vscode then
     vim.cmd.colorscheme("PaperColor")
 end
 
+vim.diagnostic.config({
+  virtual_text = true,
+  underline = true,
+  signs = true,
+})
+
