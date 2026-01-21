@@ -12,6 +12,7 @@
     ~/.config/rofi: rofi
     ~/.config/picom: picom
     ~/.config/kitty: kitty
+    ~/.config/alacritty: alacritty
     ~/.config/hypr: hyprland
     ~/.config/waybar: waybar
     ~/.config/dunst: dunst

@@ -53,6 +53,7 @@ sudo pacman -S --needed \
     feh \
     git \
     kitty \
+    alacritty \
     ripgrep \
     python3 \
     tmux \
