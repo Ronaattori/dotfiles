@@ -111,6 +111,10 @@ alias vimconfig="vim ~/.vim/vimrc"
 alias rgf="rg --files | rg"
 alias ducks="du -cksh * | sort -h"
 alias clipboard="xclip -sel clip" # Pipe stuff to the clipboard. eg. "ls | clipboard"
+alias bwu='export BW_SESSION=$(bw unlock --raw) && bw sync && bw status'
+alias gits='git status'
+alias gitd='git diff'
+alias gitdc='git diff --cached'
 
 # Unbind some ZSH defaults
 bindkey -r "^J" # ctrl + j == accept-line
