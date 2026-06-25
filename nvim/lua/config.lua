@@ -1,3 +1,6 @@
+-- Load plugins
+require("plugins.plugins")
+
 local opts = {
 	shiftwidth = 4,
 	tabstop = 4,
@@ -10,6 +13,11 @@ local opts = {
 	smartindent = true,
 	copyindent = true,
 }
+
+vim.g.mapleader = "\\"
+vim.g.maplocalleader = "\\"
+
+vim.o.autocomplete = true
 
 -- Set options from table
 for opt, val in pairs(opts) do
