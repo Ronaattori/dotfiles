@@ -23,6 +23,10 @@ alias gitdc='git diff --cached'
 # Unbind some ZSH defaults
 bindkey -r "^J" # ctrl + j == accept-line
 
+# Fix ctrl+arrow keys
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+
 # Enable command history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
